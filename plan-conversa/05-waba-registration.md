@@ -7,8 +7,9 @@
 
 ## 1. Decision
 
+- **Use case:** **Customer service** — tenant links their own WA number to Conversa via Embedded Signup; Conversa receives **inbound** messages and **replies** (not broadcasting).
 - **Use now:** **Tech Provider** — self-serve in App Dashboard, done in days, no application. Tenants link their **own** WABA via Embedded Signup.
-- **Bundled billing (tenant pays one bill incl. API) = Solution Partner only.** Start pass-through; apply for Solution Partner after paying tenants + PT Conversa AI formed; then bundle via Credit Allocation API (`MANAGE_BILLING` permission, share your credit line → Meta bills you → you invoice the tenant).
+- **Solution Partner = NOT relevant** for this use case. It only adds a credit line + bundled billing (one bill incl. API cost). We use **pass-through**: tenant pays Meta directly for API usage, Conversa charges its subscription separately. Solution Partner only if billing later changes to bundled (apply after paying tenants + PT formed).
 
 ---
 
@@ -39,7 +40,7 @@ Tenant "Connect WhatsApp" flow (WABA Sharing model):
   4. Persist: `tenant_id ↔ waba_id, phone_number_id, business_token`
 - **Send:** `POST /<phone_number_id>/messages` with the tenant's token (inside 24h window, or via approved template outside it).
 - **Receive:** one webhook for all tenants → route by `phone_number_id`/`waba_id` → bot → reply.
-- WA-4: 24h service window + templates · WA-6: show Meta per-message fees to the tenant (pass-through transparency).
+- WA-4: 24h service window + templates · WA-6: show Meta per-message fees to the tenant (pass-through transparency — Meta bills the tenant directly, not Conversa).
 
 ---
 
@@ -49,13 +50,28 @@ Tenant "Connect WhatsApp" flow (WABA Sharing model):
 |---|---|---|---|
 | **1. Tech Provider** | Now (days) | Embedded signup live in console; onboard first clients (client adds own payment method, Conversa charges sub on top) | Hits 100 paid users / 1 month target. 200/week cap is irrelevant at this stage |
 | **2. Tech Partner** | ~after 10 active clients + 2,500 msgs/day | Self-initiated upgrade, no application | Removes onboarding cap for 1k–10k scale + official badge |
-| **3. Solution Partner** | After PT Conversa AI forms + paying tenants | Application via Meta | Unlocks the credit line → bundled pricing (preferred model) |
+| **3. Solution Partner** | Only if billing changes to bundled | Application via Meta | Unlocks credit line → bundled billing (NOT needed for pass-through / customer-service use case) |
 
 Note: 10k needs partner status — as a pure Tech Provider you'd be capped at ~1.2k new clients / 6 months.
 
 ---
 
-## 5. Gotchas (one line each)
+## 5. New-client onboarding limits (per partner type)
+
+| Partner type | New clients / rolling 7-day window | Notes |
+|---|---|---|
+| Plain developer (verified + App Review) | 200 | Baseline after BV + App Review + Access Verification |
+| **Tech Provider** | **200** | Self-serve; no application. Total connected tenants has no hard cap — only onboarding *speed* is capped |
+| **Tech Partner** | Higher (not published — granted with partner status) | Self-initiated upgrade: ≥2,500 avg msgs/day OR ≥200 calls/day + ≥10 active clients + ≥90% quality |
+| **Solution Partner (BSP)** | Highest (not published — vetted/granted) | Selective application + credit line |
+
+Implication for target 1k–10k in 6 months:
+- **1k** (~38/week) → Tech Provider covers it comfortably.
+- **5k–10k** (~192–385/week) → Tech Provider cap (200/week) blocks >5k; upgrade to Tech Partner when you hit volume thresholds.
+
+---
+
+## 6. Gotchas (one line each)
 
 - **Fresh dedicated number** — not registered on any WhatsApp app; consider a second number for production once the PT forms.
 - **Set timezone Asia/Jakarta + IDR before billing** — immutable after a line of credit. (German tenants: Europe/Berlin + EUR.)

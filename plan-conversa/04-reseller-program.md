@@ -27,7 +27,7 @@ Reseller                           Conversa                         End Client
 ## 2. Commission Structure
 
 | Plan | Client Pays | Reseller Gets (Flat) | You Keep |
-|------|------------|---------------------|----------|
+| --- | --- | --- | --- |
 | **Starter** | $29/mo | **$3/mo** (10%) | $26/mo |
 | **Growth** | $99/mo | **$10/mo** (10%) | $89/mo |
 | **Pro** | $299/mo | **$45/mo** (15%) | $254/mo |

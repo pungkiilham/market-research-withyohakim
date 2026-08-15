@@ -26,9 +26,10 @@
 
 ### 5. Conversa AI — WABA Registration & Meta Partner Path
 - **Focus:** WhatsApp Business API (WABA) untuk channel WhatsApp (Phase 2) + daftar **langsung ke Meta sebagai partner**
-- **Decision:** Pakai **CV Estro Hutama** untuk Meta Business Portfolio + WABA (dev/test) + **Tech Provider** (self-serve, hari); customer pakai WABA masing-masing (embedded signup); SAFE tetap di PT Conversa AI; **Solution Partner** nanti (bundled billing, aplikasi ke Meta)
+- **Use case:** Customer service — tenant link nomor WA mereka ke Conversa via **Embedded Signup**, Conversa terima inbound + balas (bukan broadcasting). Billing: **pass-through** (tenant bayar Meta, Conversa tagih sub terpisah).
+- **Decision:** Pakai **CV Estro Hutama** untuk Meta Business Portfolio + WABA (dev/test) + **Tech Provider** (self-serve, hari) — **cukup & cocok** untuk use case customer service. **Solution Partner TIDAK relevan** (hanya untuk bundled billing/credit line, aplikasi ke Meta, gated). Upgrade **Tech Partner** nanti jika onboarding >200 klien/minggu (1k–10k target).
 - **Update 1:** Pitch Tobias sukses (2026-08-13) — web widget klinik + referral kolega/rumah sakit Jerman (Phase 2)
-- **Update 2 (2026-08-15):** Daftar langsung ke Meta sebagai partner (bukan lewat BSP 360dialog/WATI). Tenant link nomor WA via **Embedded Signup**; Conversa handle chat. Path: Tech Provider → Tech Partner → Solution Partner (bundled). Detail di `05-waba-registration.md`.
+- **Update 2 (2026-08-15):** Daftar langsung ke Meta sebagai partner (bukan lewat BSP 360dialog/WATI). Tenant link nomor WA via **Embedded Signup**; Conversa handle chat. Detail di `05-waba-registration.md` §3–§6.
 - **Status:** ✅ Research done (`plan-conversa/05-waba-registration.md`)
 - **Next:** Start Tech Provider onboarding di App Dashboard; App Review (2 demo video); integrasi Embedded Signup; verification Estro; web widget klinik Tobias
 

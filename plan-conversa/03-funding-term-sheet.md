@@ -110,7 +110,7 @@ Two paths — you choose:
 
 ## 8. Next Steps
 
-- [ ] **You + Yohakim** — decide: CV Estro Hutama vs new PT vs Yohakim's PT
+- [ ] **You + Yohakim** — WABA: CV Estro Hutama (see `05-waba-registration.md`); SAFE issuer = PT Conversa AI (form before Tobias wires)
 - [ ] **You** — prepare 15-min Conversa demo for Tobias
 - [ ] **You** — send proposal email (template in `02-funding-strategy.md`)
 - [ ] **You + Yohakim** — download YC SAFE template (ycombinator.com/documents)
