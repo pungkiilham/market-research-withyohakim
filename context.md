@@ -24,6 +24,14 @@
 - **Payout:** Quarterly, no minimum
 - **Status:** ✅ Program drafted (`plan-conversa/04-reseller-program.md`)
 
+### 5. Conversa AI — WABA Registration & Meta Partner Path
+- **Focus:** WhatsApp Business API (WABA) untuk channel WhatsApp (Phase 2) + daftar **langsung ke Meta sebagai partner**
+- **Decision:** Pakai **CV Estro Hutama** untuk Meta Business Portfolio + WABA (dev/test) + **Tech Provider** (self-serve, hari); customer pakai WABA masing-masing (embedded signup); SAFE tetap di PT Conversa AI; **Solution Partner** nanti (bundled billing, aplikasi ke Meta)
+- **Update 1:** Pitch Tobias sukses (2026-08-13) — web widget klinik + referral kolega/rumah sakit Jerman (Phase 2)
+- **Update 2 (2026-08-15):** Daftar langsung ke Meta sebagai partner (bukan lewat BSP 360dialog/WATI). Tenant link nomor WA via **Embedded Signup**; Conversa handle chat. Path: Tech Provider → Tech Partner → Solution Partner (bundled). Detail di `05-waba-registration.md`.
+- **Status:** ✅ Research done (`plan-conversa/05-waba-registration.md`)
+- **Next:** Start Tech Provider onboarding di App Dashboard; App Review (2 demo video); integrasi Embedded Signup; verification Estro; web widget klinik Tobias
+
 ## File Structure
 
 ```
@@ -35,6 +43,7 @@ market-research-api-provider/
 │   ├── 02-funding-strategy.md         # Strategi pendekatan ke Tobias
 │   ├── 03-funding-term-sheet.md       # Term sheet + detail pendanaan
 │   ├── 04-reseller-program.md         # Reseller program
+│   ├── 05-waba-registration.md        # WABA registration + Meta partner path (CV Estro, Tech Provider → Solution Partner)
 │   ├── 21-brd.md                      # BRD
 │   ├── 22-prd.md                      # PRD
 │   └── Conversa — AI customer service that remembers every customer.pdf
@@ -49,31 +58,32 @@ market-research-api-provider/
 | **Team** | You (50%) + Yohakim (50%) |
 | **Stage** | MVP built & deployed (private beta), 0 paying customers |
 | **Funding Target** | €15,000 pre-seed SAFE @ €500K cap, 20% discount |
-| **Primary target** | Tobias (Proctor founder) — pitch this week |
+| **Primary target** | Tobias — ✅ pitched (2026-08-13); first customer (clinic web widget) + referral ke kolega/rumah sakit Jerman |
 | **Reseller model** | Agencies sell to their clients, 10-15% flat lifetime commission, quarterly payout |
-| **Key blocker** | Legal entity TBD (CV Estro Hutama vs new PT vs Yohakim's PT) |
+| **WABA entity** | CV Estro Hutama (dev/test); customers use own WABA; SAFE issuer = PT Conversa AI |
+| **Key blocker** | PT Conversa AI belum dibentuk (untuk SAFE); verification Estro bisa mulai sekarang |
 
 ## Last Discussion Points
 
 - **SAFE vs Equity:** SAFE lebih sederhana untuk pre-seed, pakai YC standard
 - **Funding amount:** €15,000 (covers 12 bulan ops + WhatsApp dev + marketing)
-- **Tobias approach:** Two paths — Customer First (€1,800 integration + $69/mo sub) or Bundled (€11,800 total + SAFE)
+- **Tobias approach:** Two paths — Customer First (€1,800 integration + $69/mo sub) or Bundled (€11,800 total + SAFE). ✅ Pitch done (2026-08-13): mau pakai untuk klinik (web widget dulu) + referensikan ke kolega/rumah sakit
+- **German clients:** Web widget dulu (Phase 1); WhatsApp/WABA = Phase 2, tiap klinik pakai WABA sendiri (dokumen Jerman: Handelsregister/Gewerbeanmeldung/USt-ID), GDPR admin-only di WhatsApp
 - **Reseller commission:** Flat $3 (Starter) / $10 (Growth) / $45 (Pro) per client/month, lifetime recurring
-- **Entity:** Need to decide legal structure before Tobias can wire money
+- **Entity:** Decided — Estro for WABA (operational), PT Conversa AI sebagai issuer SAFE. Form PT before Tobias wires money.
 
 ## Next Steps (immediate)
 
-1. [ ] You + Yohakim: decide legal entity (CV / PT / new PT)
-2. [ ] You: prepare 15-min Conversa demo for Tobias
-3. [ ] You: pitch Tobias this week (see `02-funding-strategy.md` for email template)
+1. [ ] You + Yohakim: start Meta Business verification under CV Estro (see `05-waba-registration.md`)
+2. [ ] You: integrate web widget untuk klinik Tobias (deliverable pertama, tanpa WABA)
+3. [ ] You: prepare 15-min Conversa demo for Tobias (jika belum demo)
 4. [ ] You + Yohakim: download YC SAFE template (ycombinator.com/documents)
-5. [ ] Close Tobias — customer first, then SAFE
+5. [ ] Close Tobias — customer first (web), lalu SAFE
 6. [ ] Recruit 2-3 reseller agencies to test the program
 
 ## Open Questions
 
-- [- ] Legal entity: CV Estro Hutama vs new PT vs Yohakim's PT?
-- [- ] LLM provider choice (GPT-4o-mini vs Claude vs local)
-- [- ] Pricing finalization for Conversa subscription
-- [- ] When to open to other angel investors after Tobias
-- [- ] Reseller tracking system (referral links vs dashboard)
+- [ ] LLM provider choice (GPT-4o-mini vs Claude vs local)
+- [ ] Pricing finalization for Conversa subscription
+- [ ] When to open to other angel investors after Tobias
+- [ ] Reseller tracking system (referral links vs dashboard)
