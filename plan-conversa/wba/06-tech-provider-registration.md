@@ -240,4 +240,4 @@ If 5+ items are checked → **you can start the Tech Provider onboarding today.*
 
 ---
 
-*Companion docs: [22 — PRD](./22-prd.md) §5.6 WhatsApp Channel · [05 — WABA Registration & Meta Partner Path](./05-waba-registration.md) · [CONTEXT.md](../context.md) · [03 — Funding Term Sheet](./03-funding-term-sheet.md)*
+*Companion docs: [22 — PRD](./22-prd.md) §5.6 WhatsApp Channel · [05 — WABA Registration & Meta Partner Path](./05-waba-registration.md) · [CONTEXT.md](../../context.md) · [03 — Funding Term Sheet](./03-funding-term-sheet.md)*

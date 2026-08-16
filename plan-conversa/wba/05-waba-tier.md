@@ -83,4 +83,4 @@ Implication for target 1k–10k in 6 months:
 
 ---
 
-*Companion docs: [22 — PRD](./22-prd.md) §5.6 WhatsApp Channel · [CONTEXT.md](../context.md)*
+*Companion docs: [22 — PRD](./22-prd.md) §5.6 WhatsApp Channel · [CONTEXT.md](../../context.md)*
